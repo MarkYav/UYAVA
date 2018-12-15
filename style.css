@@ -1,71 +1,118 @@
- *{
+*{
  	box-sizing: border-box;
  	margin: 0;
  	font-family: Century Gothic;
  	color: #333;
  	text-decoration: none;
- }
+}
 
- ::selection{background: #ccc}
+::selection{background: #ccc}
 
- body{background: #f4f4f4;}
+body{background: #f4f4f4;}
 
- .header{
- 	width: 100%;
+/************************************************ header ************************************************/
+
+.header{
+	width: 100%;
  	z-index: 1;
  	padding: 15px;
- 	background: #f4f4f4;
+ 	background: #474a51;
  	box-shadow: 5px 10px 15px rgba(0,0,0,0.3);
  	position: fixed;
- }
+}
 
- .nav {text-align: center;}
+.nav {
+ 	text-align: center;
+}
 
- .nav li{							/*nave_case*/
+.nav_case{
 	display: inline-block;
  	padding: 8px 16px;
  	border-radius: 8px;
  	transition: 0.5s
- }
+}
 
- .nav_case:hover, #active{
- 	background: #7b5055;
- 	color: #f4f4f4;				/* не хочет */
- }
+.nav_case a{
+	display: inline-block;
+ 	padding: 8px 16px;
+ 	border-radius: 8px;
+ 	transition: 0.5s;
+ 	color: #f4f4f4;
+}
+
+.nav_case a:hover, #hover{
+	background: #bfff00;
+	color: #474a51;
+}
 
  .phones{
 	float: right; 
-	background: #7b5055;
- 	color: #f4f4f4;
 	cursor: pointer;
+	padding: 8px 16px;
+	list-style-type: none;
 	/*display: list-item;*/
 }
 
-.phones li{
-	color: #f4f4f4;
+.phones ul{
+	display: inline-block;
+	padding: 0px 5px;
 }
 
- .theme{
-	float: left;
-	padding: 8px 16px;
-	font-weight: bold;
-	font-size: 20px;
+.phones li{
+	color: #bfff00;
+	list-style-type: none;
+	text-align: center;
 }
+
+.emai{
+	padding: 10px 0px;/*************************************/
+}
+
+.theme{
+	float: left;
+	padding: 10px 0px 10px 10px;
+	font-weight: bold;
+	font-size: 30px;
+	color: #bfff00;
+}
+
  .header img{
  	width: 50px;
  	float: left;
  }
 
+/************************************************ main image ************************************************/
+/*
 .main_img{
-	width: 100%;
- 	height: 800px;
- 	padding: 0px;
-}
+	height: 800px;
+	width: 1519.2px;/**********//*
+ 	background: 
+ 		#fff
+ 		url(main_image.jpg)
+ 		no-repeat
+ 		fixed;
+}*/
+
+ .main_img{
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: #fff;
+ 	background-image: url(main_image.jpg);     /* измениться ли? */
+ 	background-attachment: fixed;
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-size: cover;
+ 	display: flex;
+ 	overflow: auto;
+ }
+
+/************************************************ menu ************************************************/
 
 .menu {
-	background: #7b5055;
+	background: #474a51;/*#7b5055*/
 	padding: 15px;
 	text-align: center;
+	margin: 0px 0px 10px 0px;
 }
 
 .menu li{
@@ -74,34 +121,112 @@
 
 .menu a{
 	text-decoration: none;
-	color: #f4f4f4;
+	color: #bfff00;
 	display: block;
 	padding: 0px 50px;
 }
 
-
+/************************************************ main content ************************************************/
 
  .section{
  	background: #fff;
- 	padding: 15px;
+	border-radius: 10px;
+ 	width: 1000px;
+ 	height: 582.1px;
+ 	margin: auto;
  	margin-bottom: 10px;
- 	border-radius: 10px;
  }
 
- .section h3{
- 	text-align: center;
- 	font-size: 14pt;
+h3{
+	text-align: center;
+	font-size: 26pt;
+}
+
+.section > div{
+	padding: 30px;
+	min-height: 400px;
+	height: 100%;
+}
+
+
+.section > div > div{
+	padding: 30px 0px 0px 0px;
+}
+
+.section_img{
+	width: 68.5%;
+	height: 452.1px;
+	float: left;
+	overflow: hidden;
+}
+
+.section_text{
+	padding-left: 662.8px;
+	font-size: 20pt;
+	color: #474a51;
+}
+
+ /************************************************ footer ************************************************/
+
+.footer{
+ 	height: 200px;
+ 	width: 100%;
+ 	background-color: #474a51;
+ 	/*padding-top: 15px;/***************/
  }
 
- .section_img{
- 	width: 200px;
+.footer ul{
+	height: 200px;
+	padding: 20px 40px 20px 40px;
+}
+
+.footer > ul > li{
+ 	display: inline-block;
  }
 
- .left{					/* картинки налезают друг на друга при маленьком тексте */
- 	float: left;
- 	margin: 0 1em 0 0;
- }
+.footer_section_img{
+	width: 21%;
+}
 
- p{
- 	font-size: 14pt;
- }
+.footer_section_img img{
+	width: 100px;
+}
+
+.footer_section_img p{
+	color: #f4f4f4;
+}
+
+.footer_section_contacts{
+ 	width: 21%;
+ 	/*padding: 0px 2%;*/
+
+}
+
+.footer_section{
+ 	width: 36%;				/* +1% */
+}
+
+.footer_section_plants{
+	width: 21%;
+	/*padding: 0px 2%;*/
+}
+
+.footer_section_plants ul{
+	height: 100%;
+}
+
+.footer_text{
+ 	color: #f4f4f4;
+}
+
+.footer_info{
+	color: #bfff00;
+}
+
+.footer_section dl dt{					/* не хочет */
+	margin: 0px 20px;
+}
+
+.footer_section dl dd{
+	margin: 0px 40px;
+}
